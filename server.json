@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Clifford Owens",
+      "email": "clifford.owens@example.com",
+      "phone": "(989)-433-3449"
+    },
+    {
+      "id": 2,
+      "name": "Gabe Hamilton",
+      "email": "gabe.hamilton@example.com",
+      "phone": "(317)-303-3850"
+    },
+    {
+      "id": 3,
+      "name": "phyo thaw",
+      "email": "phyothaw@gmail.com",
+      "phone": "09888477273"
+    },
+    {
+      "id": 4,
+      "name": "kyaw kyaw",
+      "email": "kyaw@gmail.com",
+      "phone": "09785618398"
+    },
+    {
+      "id": 6,
+      "name": "aung aung",
+      "email": "aung@gmail.com",
+      "phone": "09761825416"
+    },
+    {
+      "id": 7,
+      "name": "maung maung",
+      "email": "maung@gmail.com",
+      "phone": "09786322343"
+    }
+  ]
+}

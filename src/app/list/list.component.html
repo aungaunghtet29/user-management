@@ -1,0 +1,44 @@
+<span>{{now | date:'medium'}}</span>
+
+<div class="d-flex flex-row-reverse bd-hightlight">
+
+    <button class="btn btn-outline-danger" style="margin-left: 15px;">
+    <i class="fa fa-search"> Search</i>
+  </button>
+    <button class="btn btn-outline-primary" routerLink="/add">
+    <i class="fa fa-plus"> Add</i>
+  </button>
+
+</div>
+
+<h2 class="mb-3 text-center">User List</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of Users">
+            <th>{{user.id}}</th>
+            <th>{{user.name}}</th>
+            <th>{{user.email}}</th>
+            <th>{{user.phone}}</th>
+            <th>
+                <button class="btn btn-outline-danger btn-sm " style="margin-right: 10px;" (click)="remove(user.id)">
+              <i class="fa fa-trash"> Delete</i>
+            </button>
+                <button class="btn btn-outline-info btn-sm" routerLink="/edit/{{user.id}}">
+              <i class="fa fa-edit"> Edit</i>
+            </button>
+            </th>
+
+        </tr>
+    </tbody>
+</table>

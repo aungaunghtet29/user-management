@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+.twelve h4 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 160px;
+    text-align: center;
+    margin: auto;
+    white-space: nowrap;
+    padding-bottom: 13px;
+}
+
+.twelve h4:before {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.twelve h4:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    height: 3px;
+    width: 60px;
+    right: 0;
+    bottom: 0;
+    margin-top: 5px;
+    margin-left: 90px;
+}
+
+
+/*
+.twelve h4:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 75px;
+    margin-top: 0.25em;
+}
+*/

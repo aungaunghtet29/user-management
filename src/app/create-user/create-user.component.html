@@ -1,0 +1,79 @@
+<h2 class="mb-3 text-center">Add New User</h2>
+
+<div class="row mt-4">
+    <div class="d-flex justify-content-center">
+        <div class="card">
+            <div class="card-header text-center">
+                Registeration From
+            </div>
+
+            <div [formGroup]='form' class="card-body">
+
+                <div class="form-group mb-2">
+                    <label for="name">Name</label>
+                    <div class="input-group ">
+                        <div class=" input-group-prepend ">
+                            <span class="input-group-text "> <i class="fa fa-user p-1 "></i></span>
+                        </div>
+                        <input type="text " class="form-control " formControlName='name'>
+                    </div>
+
+                    <div *ngIf="showError('name') ">
+                        <span class="text-danger mt-2 " *ngIf="form.get( 'name')?.errors ">
+                      Name is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-2">
+                    <label for="email ">Email</label>
+
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-envelope p-1"></i> </span>
+                        </div>
+                        <input type="email " class="form-control " formControlName='email'>
+                    </div>
+
+                    <div *ngIf="showError('email') ">
+                        <span class="text-danger mt-2 " *ngIf="form.get( 'email')?.errors ">
+                        Email is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="phone">Phone</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                          <i class="fa fa-phone p-1" ></i>
+                        </span>
+                        </div>
+                        <input type="text" class="form-control" formControlName='phone'>
+                    </div>
+                    <div *ngIf="showError('phone')">
+                        <span class="text-danger mt-2" *ngIf="form.get('phone')?.errors">
+                          Phone is required
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group mt-4">
+
+                    <button class="btn btn-outline-danger btn-sm p-2" style="margin-right: 30px; margin-left: 250px;" (click)="form.reset()">
+                          <i class="fa fa-recycle"> Cancel</i>
+                        </button>
+
+
+                    <button class="btn btn-outline-primary btn-sm p-2" [disabled]="!form.valid" (click)="formSubmit(); form.reset() ; ">
+                          <i class="fa fa-save"> Submit</i>
+                        </button>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
